@@ -8,7 +8,7 @@ slf4j and log4j for Android
 
 ## Resource
 
-[slf4j-api-xxx + slf4j-log4j-xxx + slf4j-android-xxx]((http://www.slf4j.org/download.html))
+[slf4j-api-xxx + slf4j-log4j-xxx + slf4j-android-xxx](http://www.slf4j.org/download.html)
 
 [slf4j-android](http://www.slf4j.org/android/)
 
