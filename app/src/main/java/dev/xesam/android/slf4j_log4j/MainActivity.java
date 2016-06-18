@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 public class MainActivity extends AppCompatActivity {
 
     Logger logger = LoggerFactory.getLogger(MainActivity.class);
-    org.apache.log4j.Logger logger1 = org.apache.log4j.Logger.getLogger(MainActivity.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.info).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//        logger.info("My Application Created");
-                logger1.info("My Application Created");
+                Stub.print();
+                logger.info("My Application Created");
             }
         });
 

@@ -2,7 +2,7 @@
 
 1. Android + slf4j --> slf4j-api-xxx + slf4j-android-xxx
 2. Android + log4j --> log4j-xxx + android-logging-log4j
-3. Android + slf4j + log4j --> slf4j-api-xxx + slf4j-log4j-xxx.jar + android-logging-log4j
+3. Android + slf4j + log4j --> slf4j-api-xxx + slf4j-log4j-xxx + log4j-xxx + android-logging-log4j
 
 ## slf4j-api-xxx + slf4j-log4j-xxx + slf4j-android-xxx
 
