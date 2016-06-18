@@ -22,3 +22,67 @@
 
 ## remove log with ProGuard
 
+### 1
+
+build.gradle
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    
+            // With the file below, it does not work!
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+proguard-rules.pro    
+
+    -assumenosideeffects class * implements org.slf4j.Logger {
+        public *** trace(...);
+        public *** debug(...);
+        public *** info(...);
+        public *** warn(...);
+        public *** error(...);
+    }
+    
+    -assumenosideeffects class org.slf4j.Logger {
+        public *** trace(...);
+        public *** debug(...);
+        public *** info(...);
+        public *** warn(...);
+        public *** error(...);
+    }
+    
+### 2
+
+build.gradle
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+    
+proguard-rules.pro    
+    
+    -optimizations <your config>
+    
+    ....
+        
+    -assumenosideeffects class * implements org.slf4j.Logger {
+        public *** trace(...);
+        public *** debug(...);
+        public *** info(...);
+        public *** warn(...);
+        public *** error(...);
+    }
+    
+    -assumenosideeffects class org.slf4j.Logger {
+        public *** trace(...);
+        public *** debug(...);
+        public *** info(...);
+        public *** warn(...);
+        public *** error(...);
+    }
