@@ -1,5 +1,7 @@
 # Android Log
 
+slf4j and log4j for Android
+
 1. Android + slf4j --> slf4j-api-xxx + slf4j-android-xxx
 2. Android + log4j --> log4j-xxx + android-logging-log4j
 3. Android + slf4j + log4j --> slf4j-api-xxx + slf4j-log4j-xxx + log4j-xxx + android-logging-log4j
